@@ -1,0 +1,308 @@
+@var1:0;
+body{
+	margin:@var1;
+}
+
+header{
+background: #87509c;
+height: 500px;
+display: flex;
+flex-direction: column;
+padding-bottom: 50px;
+}
+header>nav{
+margin:0px 50px 100px 120px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 90px;
+}
+ header span{
+	font-size: 26pt;
+	align-self: center;
+	color:white;
+}
+a{text-decoration: none;color: white;}
+ header ul{margin:0; align-self: center;}
+li{display: inline; margin-right: 20px;padding: 10px;border-radius: 4px;}
+ header ul>li:hover{
+	background: #643a79;
+
+}
+.Podpis{
+	margin:0 200px 20px 200px;
+	text-align: center;
+}
+button{
+	width: 150px;
+	align-self: center;
+	background: #eb7d4b;
+	border:none;
+	padding:10px;
+	color: white;
+}
+.Block{
+	background: #17c2a4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	padding-top:50px; 
+	padding-bottom:50px;
+	text-align: center;
+}
+.Cart_items{
+	display: flex;
+	justify-content: center;
+}
+section>span:nth-child(1){font-size: 20pt;}
+section>span:nth-child(2){font-size: 20pt;}
+section>span:nth-child(4){opacity: 0.7;}
+.Tire{
+	width: 70px;
+	height: 3px;
+	background: #14a58c;
+	margin-bottom: 10px;
+	align-self: center;
+}
+.Cart{
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  margin:60px 20px 20px 20px; 
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.Cart>span:nth-child(2){font-size: 18pt;margin:10px 0 10px 0;}
+.Contact{
+	background:#3c5499;
+	padding-bottom:30px;
+}
+.Contact input{margin:10px 0 20px 0;}
+.StyleInput{
+	background:#273a71;
+	color: white;
+	border:none;
+	padding:10px;
+}
+.Contact input[type="button"]{
+	background:#30bae7;
+	border:none;
+	padding:10px 30px 10px 30px;
+	font-size: 14pt;
+	color: white;
+}
+.Section_4{
+	background:#d74680;
+}
+footer{
+	background:#344b8e;
+	display: flex;
+	justify-content: center;
+}
+footer :hover{
+	color:#30bae7;
+}
+.CartNews{
+	align-self:flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-right: 30px;
+	margin-bottom: 30px;
+    flex-basis: 300px;
+    flex-shrink: 1;
+}
+.CartNews>div:last-child{
+	flex-basis: 80%;
+	display: flex;
+	flex-direction: column; 
+	align-items:flex-start;
+}
+.CartNews span{text-align: left;}
+.CartNews>div:first-child{
+	margin-right:30px; 
+	flex-basis: 20%;
+    display: inline-flex;
+    width: 50px; /* задаете свои размеры */
+    height: 50px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50%;
+    /* не забываем о кроссбраузерности */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: #aaa 1px solid;
+    box-shadow: 0px 10px 1px 1px #bbb; /* тень */
+    -moz-box-shadow: 0px 1px 1px 1px #bbb;
+    -webkit-box-shadow: 0px 1px 1px 1px #bbb;
+}
+.CartNews>div img{
+  width: 100%;
+  justify-content: center;
+  border-radius: 50%;
+
+} 
+.CartNews  span:nth-child(1){ font-style: italic;margin-bottom: 10px; }
+.CartNews  span:nth-child(2){ font-size:14pt;}
+.CartNews  span:nth-child(3){ font-size:10pt;color:#fac996;}
+.CartBox{
+	padding-top:40px;
+	width: 680px;
+	align-self:center;
+	justify-content:center;
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+
+}
+.pop{
+	background:green;
+}
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+.radial-progress {
+	@circle-size: 120px;
+	@circle-background: #d6dadc;
+	@circle-color:red;
+	@inset-size: 90px;
+	@inset-color: #fbfbfb;
+	@transition-length: 1s;
+	@shadow: 6px 6px 10px rgba(0,0,0,0.2);
+	@percentage-color: #97a71d;
+	@percentage-font-size: 22px;
+	@percentage-text-width: 57px;
+
+	margin: 50px;
+	width:  @circle-size;
+	height: @circle-size;
+
+	background-color: @circle-background;
+	border-radius: 50%;
+	.circle {
+		.mask, .fill, .shadow {
+			width:    @circle-size;
+			height:   @circle-size;
+			position: absolute;
+			border-radius: 50%;
+		}
+		.shadow {
+			box-shadow: @shadow inset;
+		}
+		.mask, .fill {
+			-webkit-backface-visibility: hidden;
+			transition: -webkit-transform @transition-length;
+			transition: -ms-transform @transition-length;
+			transition: transform @transition-length;
+			border-radius: 100%;
+		}
+		.mask {
+			clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+			.fill {
+				clip: rect(0px, @circle-size/2, @circle-size, 0px);
+				background-color: @circle-color;
+			}
+		}
+	}
+	.inset {
+		width:       @inset-size;
+		height:      @inset-size;
+		position:    absolute;
+		margin-left: (@circle-size - @inset-size)/2;
+		margin-top:  (@circle-size - @inset-size)/2;
+
+		background-color: @inset-color;
+		border-radius: 100%;
+		box-shadow: @shadow;
+		.percentage {
+			height:   @percentage-font-size;
+			width:    @percentage-text-width;
+			overflow: hidden;
+
+			position: absolute;
+			top:      (@inset-size - @percentage-font-size) / 2;
+			left:     (@inset-size - @percentage-text-width) / 2;
+
+			line-height: 1;
+			.numbers {
+				margin-top: -@percentage-font-size;
+				transition: width @transition-length;
+				span {
+					width:          @percentage-text-width;
+					display:        inline-block;
+					vertical-align: top;
+					text-align:     center;
+					font-weight:    800;
+					font-size:      @percentage-font-size;
+					font-family:    "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+					color:          @percentage-color;
+				}
+			}
+		}
+	}
+
+	@i: 0;
+	@increment: 180deg / 100;
+	.loop (@i) when (@i <= 100) {
+		&[data-progress="@{i}"] {
+			.circle {
+				.mask.full, .fill {
+					-webkit-transform: rotate(@increment * @i);
+					-ms-transform: rotate(@increment * @i);
+					transform: rotate(@increment * @i);
+				}	
+				.fill.fix {
+					-webkit-transform: rotate(@increment * @i * 2);
+					-ms-transform: rotate(@increment * @i * 2);
+					transform: rotate(@increment * @i * 2);
+				}
+			}
+			.inset .percentage .numbers {
+				width: @i * @percentage-text-width + @percentage-text-width;
+			}
+		}
+		.loop(@i + 1);
+	}
+	.loop(@i);
+}
+.CircleOne{
+	background:green;
+}
+.FlexColumn{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.Section_2{
+   background:white;
+   color: black;
+
+}
+.Section_2>span{
+      text-align: center;
+}
+
+.Section_3{
+	width: 100%;
+	height: 400px;
+	background:green;
+	justify-content: center;
+	display: flex;
+}
+.Section_3>div{
+	align-self:flex-end;
+	width: 10px;
+	height: 10px;
+	border-radius:50%;
+	background-color:red;
+	padding:10px;
+	cursor: pointer;
+}
